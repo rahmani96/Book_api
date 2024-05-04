@@ -13,10 +13,11 @@ class BookController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return App\Http\Utilities\ApiResponse
      */
     public function index()
-    {   try {
+    {
+        try {
             return ApiResponse::success('Get Books Successfully', Book::all(), 200);
         } catch (\Throwable $th) {
             return ApiResponse::error("Get all books operation failed", $th->getMessage(), 500);
@@ -27,7 +28,7 @@ class BookController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return App\Http\Utilities\ApiResponse
      */
     public function store(Request $request)
     {
@@ -59,8 +60,8 @@ class BookController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Book  $book
-     * @return \Illuminate\Http\Response
+     * @param  int  $id
+     * @return App\Http\Utilities\ApiResponse
      */
     public function show($id)
     {
@@ -80,7 +81,7 @@ class BookController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Book  $book
-     * @return \Illuminate\Http\Response
+     * @return App\Http\Utilities\ApiResponse
      */
     public function update(Request $request, Book $book)
     {
@@ -104,8 +105,8 @@ class BookController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Book  $book
-     * @return \Illuminate\Http\Response
+     * @param  int  $id
+     * @return App\Http\Utilities\ApiResponse
      */
     public function destroy($id)
     {
