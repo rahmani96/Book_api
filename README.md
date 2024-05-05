@@ -17,19 +17,15 @@ Project is consiste  of a RESTful API built with the Laravel framework. The proj
 - **Show All Books:** 
 ##### GET Method - /api/v1/books
 Return a list of books.
-insert Image
 - **Show Specified Book:**
 ##### GET Method - /api/v1/books/{book}
 Return a specified book.
-Image
 - **Create Book:**
 ##### POST Method - /api/v1/books
 Return a created book.
-Image
 - **Update Book:**
 ##### PUT Method - /api/v1/books
 Returns a list of books.
-Image
 - **Delete Book:**
 ##### DELETE Method - /api/v1/books/{book}
 Returns a deleted book.
